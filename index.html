@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="user-scalable=no,width=device-width">
+  <link href="otter.css" rel="stylesheet" type="text/css">
+  <link type="image/png" sizes="16x16" rel="icon" href="otter/ottericon2.png">
+  <!--  -->
+  <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+  <!-- -->
+  <title>OTTER 3.0 - JavaScript</title>
+
+  <!-- pozadina -->
+  <style>
+    body {
+      background-image: url('slikaPozadina.png');
+      background-size: 900px 600px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: black;
+    }
+  </style>
+  <!-- ---- -->
+
+</head>
+
+<body>
+
+  <div id="divIzbornik">
+    <button id="btnMaps"><span class="emoji">&#127757;</span> Maps</button>
+
+    <button class="orange" id="btnSetupGame"><span class="emoji">&#128736;</span> Setup game #</button>
+
+    <button class="green" id="btnStart"><span class="emoji">&#127937;</span> START</button>
+    <button class="red" id="btnStop"><span class="emoji">&#10060;</span> STOP</button>
+
+  </div>
+
+  <canvas id="game"></canvas>
+
+
+
+  <!-- Info -->
+  <div class="infowrapper">
+    <p class="info"> <input type="checkbox" name="showOutput" id="showOutput">
+      Output info:</p>
+    <textarea id="taInfo" class="info" rows="4" disabled hidden></textarea>
+  </div>
+
+
+  <!-- postavke -->
+
+  <script src="otter/lib-00-GameSettings.js"></script>
+
+  <!-- mape -->
+  <script src="mapa1.js"></script>
+  <script src="mapa2.js"></script>
+  <!-- okvir -->
+
+  <script src="otter/lib-01-tiled.js"></script>
+  <script src="otter/lib-02-sensing.js"></script>
+  <script src="otter/lib-03-display.js"></script>
+  <script src="otter/lib-04-engine.js"></script>
+  <script src="otter/lib-05-game.js"></script>
+  <script src="otter/lib-06-main.js"></script>
+
+  <!-- vlastiti kod -->
+  <script src="jsKod/kod_00-staticka.js"></script>
+  <script src="jsKod/kod_01-likovi.js"></script>
+  <script src="jsKod/kod_02-postavke.js"></script>
+  <script src="jsKod/kod_03-logikaIgre.js"></script>
+
+
+  <!-- audio elementi -->
+  <audio id="macZvuk" src="zvukovi/macZvuk.wav" preload="auto"></audio>
+  <audio id="savladanZvuk" src="zvukovi/savladanZvuk.mp3" preload="auto"></audio>
+  <audio id="noviLevelZvukId" src="zvukovi/noviLevelZvuk.wav" preload="auto"></audio>
+  <audio id="pokupljenoZvukId" src="zvukovi/pokupljenoZvuk.wav" preload="auto"></audio>
+  <audio id="auZvukId" src="zvukovi/auZvuk.wav" preload="auto"></audio>
+  <audio id="gameoverZvukId" src="zvukovi/gameoverZvuk.wav" preload="auto"></audio>
+  <audio id="pobjedaZvukId" src="zvukovi/pobjedaZvuk.mp3" preload="auto"></audio>
+
+</body>
+
+</html>
